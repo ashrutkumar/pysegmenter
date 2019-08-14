@@ -62,7 +62,7 @@ def generateDataset(regionName, bing_api_key, google_api_key, source_option="bin
 				imagefetcher.fetchImage()
 				_,im=imagefetcher.cropImage(32)
 				new_im.paste(im,(xoffset,yoffset))
-				maskfetcher=ImageFetcher(
+				"""maskfetcher=ImageFetcher(
 						latitude=centerGPS.y,
 						longitude=centerGPS.x,
 						length=576,
@@ -73,6 +73,6 @@ def generateDataset(regionName, bing_api_key, google_api_key, source_option="bin
 				)
 				maskfetcher.fetchImage()
 				_,im=maskfetcher.cropImage(32)
-				new_im_mask.paste(im,(xoffset,yoffset))
+				new_im_mask.paste(im,(xoffset,yoffset))""""
 		new_im.save(os.path.join(image_path,tiles.fname))
-		new_im_mask.save(os.path.join(image_path,"mask_"+str(tiles.fname)))
+		#new_im_mask.save(os.path.join(image_path,"mask_"+str(tiles.fname)))
