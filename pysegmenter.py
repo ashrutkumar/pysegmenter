@@ -33,7 +33,7 @@ def generateDataset(regionName, bing_api_key, google_api_key, source_option="bin
 
 	for i in range(-1*reg.radiusx,reg.radiusx):
 		for j in range(-1*reg.radiusy,reg.radiusy):
-			reg_name="Bengaluru,Karntaka ,India".strip()
+			reg_name=regionName.strip()
 			reg_name=[i.lower() if i.isalpha() else " " for i in reg_name]
 			reg_name=''.join(reg_name)
 			reg_names=reg_name.split()
